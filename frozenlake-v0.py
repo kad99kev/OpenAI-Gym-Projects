@@ -85,4 +85,4 @@ for episode in range(TOTAL_EPISODES):
 env.close()
 
 print(q_table)
-print(f'Total Score after running {TOTAL_EPISODES}: {total_rewards}')
+print(f'Total Score after running {TOTAL_EPISODES} episodes: {total_rewards}')
