@@ -25,7 +25,7 @@ GAMMA = 0.95 # Discount (close to 0 makes it greedy, close to 1 considers long t
 epsilon = 1
 START_EPSILON_DECAYING = 1
 END_EPSILON_DECAYING = TOTAL_EPISODES // 2
-DECAY_RATE = 0.001
+DECAY_RATE = epsilon/(END_EPSILON_DECAYING - START_EPSILON_DECAYING)
 
 env.reset()
 goal_list = []
