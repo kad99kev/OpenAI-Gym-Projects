@@ -18,13 +18,13 @@ print(q_table)
 TOTAL_EPISODES = 5_000 #Number of epsiodes to train the algorithm
 MAX_STEPS = 100 #Max steps an agent can take during an episode
 
-LEARNING_RATE = 0.7
-GAMMA = 0.6 # Discount (close to 0 makes it greedy, close to 1 considers long term)
+LEARNING_RATE = 0.1
+GAMMA = 0.95 # Discount (close to 0 makes it greedy, close to 1 considers long term)
 
 # Exploration Parameters
 epsilon = 1
-MAX_EPSILON = 1
-MIN_EPSILON = 0.001
+START_EPSILON_DECAYING = 1
+END_EPSILON_DECAYING = TOTAL_EPISODES // 2
 DECAY_RATE = 0.001
 
 env.reset()
@@ -79,7 +79,7 @@ for episode in range(TOTAL_EPISODES):
 
         state = new_state
 
-    if MIN_EPSILON <= epsilon <= MAX_EPSILON:
+    if END_EPSILON_DECAYING >= episode >= START_EPSILON_DECAYING:
         epsilon -= DECAY_RATE
 
 env.close()
