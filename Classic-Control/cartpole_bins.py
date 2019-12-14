@@ -98,7 +98,7 @@ if __name__ == '__main__':
     END_EPSILON_DECAYING = NUM_EPSIODES // 2
     epsilon_decay_value = epsilon/(END_EPSILON_DECAYING - START_EPSILON_DECAYING)
 
-    env = gym.make('CartPole-v0')
+    env = gym.make('CartPole-v1')
     ft = FeatureTransformer()
     model = Model(env, ft)
 
