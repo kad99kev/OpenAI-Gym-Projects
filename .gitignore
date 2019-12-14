@@ -2,3 +2,5 @@
 ownEnvi.py
 gym_1.py
 dl_test_gym.py
+cartpole_bins.py
+mountainCar.py
