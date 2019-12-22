@@ -10,6 +10,7 @@ def to_bin(value, bins):
 
 def build_state(features):
     return int("".join(map(lambda feature: str(int(feature)), features)))
+
 class FeatureTransformer:
     def __init__(self):
         self.cart_position_bins = np.linspace(-4.8, 4.8, 9)
